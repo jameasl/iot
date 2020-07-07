@@ -1,0 +1,18 @@
+<kendo-chart>
+    <kendo-chart-title text="{{'Sidebar.LineChart' | translate}}"></kendo-chart-title>
+    <kendo-chart-category-axis>
+        <kendo-chart-category-axis-item
+            [categories]="[ '00:00', '01:00', '02:00', '03:00', '04:00', '05:00', '06:00', '07:00', '08:00', '09:00', '10:00', '11:00', '12:00',
+             '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00', '24:00']"
+            [title]="getTranslate('LineChart.Hour')">
+        </kendo-chart-category-axis-item>
+    </kendo-chart-category-axis>
+    <kendo-chart-series>
+        <kendo-chart-series-item type="line" [data]="[0, 20, 25, 30, 40, 45, 98]">
+        </kendo-chart-series-item>
+        <kendo-chart-series-item type="line" [data]="[0, 10, 20, 25, 47, 30, 78]">
+        </kendo-chart-series-item>
+        <kendo-chart-series-item type="line" [data]="[10, 15, 17, 21, 25, 29, 34]">
+        </kendo-chart-series-item>
+    </kendo-chart-series>
+</kendo-chart>

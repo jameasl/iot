@@ -1,0 +1,19 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #3bafda;
+    color: white;
+    padding: 1em;
+    height: 70px;
+    div {
+        display: flex;
+        align-items: center;
+        .menu {
+            cursor: pointer;
+        }
+        .setting {
+            width: 25px;
+            cursor: pointer;
+        }
+    }
+}

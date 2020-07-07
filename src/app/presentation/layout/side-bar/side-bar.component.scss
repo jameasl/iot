@@ -1,0 +1,16 @@
+:host {
+    display: block;
+    height: 100%;
+    overflow-x: hidden;
+}
+#logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    background-color: #3bafda;;
+  
+}
+kendo-panelbar {
+    height: calc(100% - 70px);
+}

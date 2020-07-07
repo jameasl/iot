@@ -1,0 +1,9 @@
+
+<div id="side-nav-layout">
+    <app-side-bar id="sidebar"  [class]="isMenuOpen ? 'open' : ''" [isMenuOpen]="isMenuOpen"></app-side-bar>
+    <div id="main" [class]="isMenuOpen ? 'open' : ''">
+        <app-header (menuEvent)="isMenuOpen= !isMenuOpen"></app-header>
+        <router-outlet></router-outlet>
+    </div>    
+</div>
+

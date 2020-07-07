@@ -1,0 +1,9 @@
+{
+    "Sidebar": {
+        "Dashboard": "داشبورد",
+        "LineChart" : "نمودار خطی"      
+    },
+    "LineChart": {
+        "Hour": "ساعت"
+    }
+}

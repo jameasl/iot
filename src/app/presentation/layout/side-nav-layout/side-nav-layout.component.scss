@@ -1,0 +1,23 @@
+:host {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+}
+#side-nav-layout {
+    display: flex;
+    height: 100%;
+}
+#sidebar {
+    width: 0;
+    transition: 0.2s;
+}
+#sidebar.open {
+    width: 200px;
+}
+#main {
+   width: 100vw;
+   transition: 0.2s;
+}
+#main.open {
+    width: calc(100vw - 200px);
+ }

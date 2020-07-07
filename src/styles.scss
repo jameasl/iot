@@ -1,0 +1,46 @@
+@import "./assets/css/material-icons.scss";
+
+body.rtl {
+    direction: rtl;
+    text-align: right;
+}
+
+// kendo panel bar 
+kendo-panelbar-item .k-image {
+    width: 1.5em;
+}
+.k-panelbar[dir="rtl"] .k-link > .k-image,
+.k-panelbar[dir="rtl"] .k-link > .k-sprite,
+ .k-rtl .k-panelbar .k-link > .k-image,
+  .k-rtl .k-panelbar .k-link > .k-sprite {
+    margin-left: 7px;
+   margin-right: 0;
+
+}
+.k-panelbar > .k-item > .k-link.k-state-selected {
+    color: #3bafda;
+    background-color: transparent;
+}
+.k-panelbar .k-group > .k-item > .k-link.k-state-selected {
+    color: #3bafda;
+    background-color: transparent;
+}
+.k-panelbar .k-group > .k-item > .k-link.k-state-selected:hover, .k-panelbar .k-group > .k-item > .k-link.k-state-selected.k-state-hover {
+    color: #3bafda;
+    background-color: transparent;
+
+}
+.k-panelbar > .k-item > .k-link.k-state-selected:hover, .k-panelbar > .k-item > .k-link.k-state-selected.k-state-hover {
+    color: #3bafda;
+    background-color: transparent;
+
+}
+.k-state-expanded {
+    .k-header {
+        color: #3bafda!important;
+    }
+}
+.k-panelbar {
+    background-color: white;
+}
+
