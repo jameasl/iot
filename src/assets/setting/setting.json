@@ -1,0 +1,10 @@
+{
+    "directions": {
+        "fa": "rtl",
+        "en": "ltr"
+    },
+    "languages": [
+        {"text": "fa", "value": "fa"},
+        {"text": "en", "value": "en"}
+    ]
+}

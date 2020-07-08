@@ -1,0 +1,13 @@
+{
+    "Sidebar": {
+        "Dashboard": "Dashboard",
+        "LineChart" : "LineChart"      
+    },
+    "LineChart": {
+        "Hour": "Hour"
+    },
+    "Setting": {
+        "Settings": "Settings"
+
+    }
+}

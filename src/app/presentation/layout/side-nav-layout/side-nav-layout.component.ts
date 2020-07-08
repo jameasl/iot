@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class SideNavLayoutComponent implements OnInit {
 
   isMenuOpen = true;
+  isSettingOpen = false;
 
   constructor() { }
 

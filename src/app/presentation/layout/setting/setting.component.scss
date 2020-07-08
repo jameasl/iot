@@ -1,0 +1,24 @@
+header {
+    height: 70px;
+    background-color: #3bafda;
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1em;
+    #close {
+        background-color: black;
+        border-radius: 50%;
+        padding: 1px;
+        cursor: pointer;
+        font-size: 1.2em;
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.63);
+        }
+    }
+}
+.main {
+    display: flex;
+    justify-content: center;
+    padding: 2em 1em;
+}

@@ -1,6 +1,6 @@
-import { Component, Renderer2, OnInit } from '@angular/core';
-import { RTL, LocalizationService, L10N_PREFIX, } from '@progress/kendo-angular-l10n';
-import { TranslateService } from '@ngx-translate/core';
+import { Component, OnInit } from '@angular/core';
+import { SettingService } from './service/inf/setting.service';
+
 
 
 @Component({
@@ -10,34 +10,20 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class AppComponent implements OnInit {
 
-  constructor(private renderer: Renderer2,
-    private localizationService: LocalizationService,
-    private translateService: TranslateService,
+  constructor(
+    private settingService: SettingService
 
     ) {
   }
   ngOnInit(): void {
-    this.getApplicationLanguage();
+    this.settingService.getAllSettings().subscribe();
+    this.checkForDefualtLanguage();
   }
-  getApplicationLanguage() {
-    let defaultLanguage = localStorage.getItem('language');
+  checkForDefualtLanguage() {
+    const defaultLanguage = localStorage.getItem('language');
     if(!defaultLanguage) {
-      defaultLanguage = 'fa';
-      localStorage.setItem('language', defaultLanguage);
-    }
-    this.translateService.setDefaultLang(defaultLanguage);
-
-    switch(defaultLanguage) {
-      case 'fa': {
-        this.renderer.addClass(document.body, 'rtl');
-        this.localizationService.changes.next({ rtl: true });
-
-        break;
-      }
-      case 'en': {
-        this.renderer.addClass(document.body, 'ltr');
-      }
+      localStorage.setItem('language', 'fa');
+      localStorage.setItem('direction', 'rtl');
     }
   }
-
 }

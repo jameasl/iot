@@ -1,0 +1,5 @@
+<kendo-dropdownlist [data]="languages" textField="text" valueField="value" [value]="defaultLanguage"  [valuePrimitive]="true" (selectionChange)="selectionChange($event.value)">
+    <ng-template kendoDropDownListItemTemplate let-dataItem>
+        <img id="template-img" src="{{ 'assets/image/flags/' + dataItem.value + '.svg'}}"> {{ dataItem.text }}
+    </ng-template>
+</kendo-dropdownlist>

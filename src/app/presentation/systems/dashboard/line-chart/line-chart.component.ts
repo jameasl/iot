@@ -1,21 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Injector } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { BaseComponent } from '../../../../core/baseComponent';
 
 @Component({
   selector: 'app-line-chart',
   templateUrl: './line-chart.component.html',
   styleUrls: ['./line-chart.component.scss']
 })
-export class LineChartComponent implements OnInit {
+export class LineChartComponent extends BaseComponent  {
 
   constructor(
-    private translateService: TranslateService
+    injector: Injector
+  ) {
+    super(injector);
+   }
 
-
-  ) { }
-
-  ngOnInit(): void {
-  }
   getTranslate(word) {
     return {
       text: this.translateService.instant(word)

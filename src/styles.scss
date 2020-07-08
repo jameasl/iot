@@ -3,7 +3,30 @@
 body.rtl {
     direction: rtl;
     text-align: right;
+
+    // setting
+    #setting  {
+        left: -250px;
+    }
+    #setting.open  {
+        left: 0;
+    }
+
 }
+body.ltr {
+    direction: ltr;
+    text-align: left;
+
+    // setting
+    #setting  {
+        right: -250px;
+    }
+    #setting.open  {
+        right: 0;
+    }
+
+}
+
 
 // kendo panel bar 
 kendo-panelbar-item .k-image {

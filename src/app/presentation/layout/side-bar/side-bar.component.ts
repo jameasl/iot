@@ -11,13 +11,11 @@ export class SideBarComponent implements OnInit {
   baseIconUrl = '/assets/icon/sidebar/';
 
   constructor(
-    private translateService: TranslateService
 
   ) {
    }
 
   ngOnInit(): void {
-    this.translateService.setDefaultLang('fa');
 
   }
   getLogoWidth() {

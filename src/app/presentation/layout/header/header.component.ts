@@ -7,6 +7,8 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   @Output() menuEvent = new EventEmitter();
+  @Output() settingEvent = new EventEmitter();
+
 
   constructor() { }
 
@@ -14,7 +16,9 @@ export class HeaderComponent implements OnInit {
   }
   onMenuClick() {
     this.menuEvent.emit();
-
+  }
+  onSettingClick() {
+    this.settingEvent.emit();
   }
 
 }

@@ -12,12 +12,20 @@
     transition: 0.2s;
 }
 #sidebar.open {
-    width: 200px;
+    width: 250px;
 }
 #main {
    width: 100vw;
    transition: 0.2s;
 }
 #main.open {
-    width: calc(100vw - 200px);
+    width: calc(100vw - 250px);
+ }
+ #setting  {
+     position: fixed;
+     width: 250px;
+     top: 0;
+     height: 100vh;
+     background-color: white;
+     transition: 0.2s;
  }
