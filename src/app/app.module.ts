@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import 'hammerjs';
-import { IntlModule } from '@progress/kendo-angular-intl';
+import { SharedModule } from './shared/shared.module';
 
 
 
@@ -19,7 +19,6 @@ import { IntlModule } from '@progress/kendo-angular-intl';
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-
   ],
   providers: [
  
