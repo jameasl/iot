@@ -1,8 +1,18 @@
 @import "./assets/css/material-icons.scss";
 
+@font-face {
+    font-family: yekan-persian;
+    src: url(./assets/font/yekan-persian.woff2)
+}
+@font-face {
+    font-family: yekan-english;
+    src: url(./assets/font/yekan-english.woff)
+}
+
 body.rtl {
     direction: rtl;
     text-align: right;
+    font-family:  yekan-persian, Arial, sans-serif!important;
 
     // setting
     #setting  {
@@ -16,6 +26,7 @@ body.rtl {
 body.ltr {
     direction: ltr;
     text-align: left;
+    font-family:  yekan-english, Arial, sans-serif!important;
 
     // setting
     #setting  {
