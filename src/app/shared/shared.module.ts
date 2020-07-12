@@ -44,6 +44,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     DropDownsModule,
     LayoutModule,
     TranslateModule,
+
   ],
   providers: [
     { provide: RTL, useFactory: directionFactory },

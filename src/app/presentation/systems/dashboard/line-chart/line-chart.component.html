@@ -1,13 +1,14 @@
 <kendo-chart>
     <kendo-chart-title text="{{'Sidebar.LineChart' | translate}}"></kendo-chart-title>
+    <kendo-chart-tooltip format="{0}"></kendo-chart-tooltip>
     <kendo-chart-category-axis>
         <kendo-chart-category-axis-item
             [categories]="[ '00:00', '04:00', '08:00', '12:00', '16:00', '20:00', '24:00']"
-            [title]="getTranslate('LineChart.Hour')">
+            [title]="{ text: categoryAxisTitle }">
         </kendo-chart-category-axis-item>
     </kendo-chart-category-axis>
     <kendo-chart-series>
-        <kendo-chart-series-item type="line" [data]="[0, 20, 25, 30, 40, 45, 98]">
-        </kendo-chart-series-item>
+      <kendo-chart-series-item type="line" [data]="[5, 24, 43,  50, 55, 60, 76]">
+      </kendo-chart-series-item>
     </kendo-chart-series>
-</kendo-chart>
+  </kendo-chart>

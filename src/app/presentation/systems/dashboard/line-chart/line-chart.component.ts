@@ -7,18 +7,18 @@ import { BaseComponent } from '../../../../core/baseComponent';
   templateUrl: './line-chart.component.html',
   styleUrls: ['./line-chart.component.scss']
 })
-export class LineChartComponent extends BaseComponent  {
+export class LineChartComponent extends BaseComponent implements OnInit {
+
+  categoryAxisTitle;
 
   constructor(
     injector: Injector
   ) {
     super(injector);
    }
-
-  getTranslate(word) {
-    return {
-      text: this.translateService.instant(word)
-    }
+  ngOnInit(): void {
+    this.translateService.get('LineChart.Hour').subscribe(result =>{
+      this.categoryAxisTitle = result;
+    });
   }
-
 }
