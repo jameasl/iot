@@ -65,6 +65,9 @@ export class PresentationModule {
     const direction = this.directions[defaultLanguage];
     this.renderer.addClass(document.body, direction);
     this.translateService.setDefaultLang(defaultLanguage);
+    this.translateService.get('Title').subscribe(result => {
+      document.title = result;
+    });
 
 
   }
