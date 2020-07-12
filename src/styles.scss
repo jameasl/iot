@@ -77,4 +77,10 @@ kendo-panelbar-item .k-image {
 .k-panelbar {
     background-color: white;
 }
+.k-panelbar .k-group > .k-item { 
+    &:focus {
+        outline: none;
+    }
+}
+
 
