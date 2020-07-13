@@ -53,9 +53,12 @@ export class PresentationModule {
     this.getApplicationSettings();
   }
   getApplicationSettings() {
-    this.directions = this.settingService.settings.directions;
-    this.languages = this.settingService.settings.languages;
-    console.log(this.directions, this.languages);
+    this.settingService.settings.subscribe(result => {
+      this.languages = result.languages;
+    });
+    this.settingService.settings.subscribe(result => {
+      this.directions = result.directions;
+    });
     this.initBodyDirection();
   }
   initBodyDirection() {

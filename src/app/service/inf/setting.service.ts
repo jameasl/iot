@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, BehaviorSubject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Resolve, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 import { tap } from 'rxjs/operators';
@@ -8,7 +8,7 @@ import { SettingModel } from '../../models/setting.model';
 @Injectable({ providedIn: 'root' })
 export class SettingService implements Resolve<SettingModel> {
 
-  settings: SettingModel;
+  public settings = new BehaviorSubject<any>({});
 
   constructor(private http: HttpClient) {
   }
@@ -17,7 +17,7 @@ export class SettingService implements Resolve<SettingModel> {
   }
   getAllSettings(): Observable<SettingModel> {
     return this.http.get<SettingModel>('/assets/setting/setting.json').pipe(tap(result => {
-      this.settings = result;
+      this.settings.next(result);
     })
     );
   }

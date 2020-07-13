@@ -67,16 +67,11 @@ export class SharedModule {
 
   ) {
     const defaultLanguage = localStorage.getItem('language');
-    this.directions = this.settingService.settings.directions;
+  
+    this.settingService.settings.subscribe(result => {
+      this.directions = result.directions;
+    });
       isRtl = this.directions[defaultLanguage] === "rtl" ? true : false;
-    // this.sharedDataService.currentLanguage.subscribe(result => {
-    //   isRtl  = this.directions[result] === "rtl" ? true : false;
-
-    // });
-
-
-
-
-
+   
   }
 }

@@ -5,7 +5,6 @@ import { LocalizationService } from '@progress/kendo-angular-l10n';
 import { TranslateService } from '@ngx-translate/core';
 import { SharedDataService } from '../../../shared/services/sharedData.service';
 import { KendoMessageService } from '../../../shared/services/kendo-message.service';
-import { from } from 'rxjs';
 
 @Component({
   selector: 'app-select-language',
@@ -31,8 +30,12 @@ export class SelectLanguageComponent implements OnInit {
   ngOnInit(): void {
     this.defaultLanguage = localStorage.getItem('language');
 
-    this.languages = this.settingService.settings.languages;
-    this.directions = this.settingService.settings.directions;
+     this.settingService.settings.subscribe(result => {
+      this.languages = result.languages;
+    });
+    this.settingService.settings.subscribe(result => {
+      this.directions = result.directions;
+    });
   }
   selectionChange(language) {
     this.sharedDataService.changeLanguage(language);
