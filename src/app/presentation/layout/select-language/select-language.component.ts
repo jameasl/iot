@@ -29,13 +29,8 @@ export class SelectLanguageComponent implements OnInit {
 
   ngOnInit(): void {
     this.defaultLanguage = localStorage.getItem('language');
-
-     this.settingService.settings.subscribe(result => {
-      this.languages = result.languages;
-    });
-    this.settingService.settings.subscribe(result => {
-      this.directions = result.directions;
-    });
+    this.languages = this.settingService.settings.languages;
+    this.directions = this.settingService.settings.directions;
   }
   selectionChange(language) {
     this.sharedDataService.changeLanguage(language);

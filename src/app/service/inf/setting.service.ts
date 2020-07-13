@@ -8,7 +8,7 @@ import { SettingModel } from '../../models/setting.model';
 @Injectable({ providedIn: 'root' })
 export class SettingService implements Resolve<SettingModel> {
 
-  public settings = new BehaviorSubject<any>({});
+  public settings: SettingModel;
 
   constructor(private http: HttpClient) {
   }
@@ -17,7 +17,7 @@ export class SettingService implements Resolve<SettingModel> {
   }
   getAllSettings(): Observable<SettingModel> {
     return this.http.get<SettingModel>('/assets/setting/setting.json').pipe(tap(result => {
-      this.settings.next(result);
+      this.settings = result ;
     })
     );
   }
