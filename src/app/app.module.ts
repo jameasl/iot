@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import 'hammerjs';
 import { SharedModule } from './shared/shared.module';
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
 
 
@@ -21,7 +22,8 @@ import { SharedModule } from './shared/shared.module';
     HttpClientModule,
   ],
   providers: [
- 
+    {provide: LocationStrategy, useClass: HashLocationStrategy},
+
   ],
   bootstrap: [AppComponent]
 })
